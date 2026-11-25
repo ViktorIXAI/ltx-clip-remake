@@ -1,0 +1,111 @@
+W0000 00:00:1795575314.584716 2764537 face_landmarker_graph.cc:181] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1795575314.586746 2764539 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1795575314.591080 2764551 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+[skip] scene_01 already accepted
+[skip] scene_02 already accepted
+[skip] scene_03 already accepted
+[skip] scene_04 already accepted
+[skip] scene_05 already accepted
+[skip] scene_06 already accepted
+[skip] scene_07 already accepted
+[skip] scene_08 already accepted
+[skip] scene_09 already accepted
+[skip] scene_10 already accepted
+[skip] scene_11 already accepted
+[skip] scene_12 already accepted
+[skip] scene_13 already accepted
+[skip] scene_14 already accepted
+[skip] scene_15 already accepted
+[skip] scene_16 already accepted
+[skip] scene_17 already accepted
+[skip] scene_18 already accepted
+[skip] scene_19 already accepted
+[skip] scene_20 already accepted
+[skip] scene_21 already accepted
+[skip] scene_22 already accepted
+[skip] scene_23 already accepted
+[skip] scene_24 already accepted
+[skip] scene_25 already accepted
+[render] scene_26 attempt 1 seed=42
+[qc] scene_26 try1: lip_ok=True corr=None score=8/10 (26.2min)
+[matte] renders/scene_26.mp4: 40 frames
+[matte] renders/scene_26.mp4: 80 frames
+[matte] renders/scene_26.mp4: 120 frames
+[matte] renders/scene_26.mp4: 160 frames
+[matte] done renders/scene_26.mp4.matetmp.mp4 (193 frames)
+[accept] scene_26 <- renders/tmp_scene_26_try1.mp4 (score=8, lip_ok=True)
+[render] scene_27 attempt 1 seed=42
+[qc] scene_27 try1: lip_ok=True corr=None score=8/10 (24.2min)
+[matte] renders/scene_27.mp4: 40 frames
+[matte] renders/scene_27.mp4: 80 frames
+[matte] renders/scene_27.mp4: 120 frames
+[matte] renders/scene_27.mp4: 160 frames
+[matte] done renders/scene_27.mp4.matetmp.mp4 (193 frames)
+[accept] scene_27 <- renders/tmp_scene_27_try1.mp4 (score=8, lip_ok=True)
+[render] scene_28 attempt 1 seed=42
+[qc] scene_28 try1: lip_ok=True corr=None score=8/10 (24.3min)
+[matte] renders/scene_28.mp4: 40 frames
+[matte] renders/scene_28.mp4: 80 frames
+[matte] renders/scene_28.mp4: 120 frames
+[matte] renders/scene_28.mp4: 160 frames
+[matte] done renders/scene_28.mp4.matetmp.mp4 (193 frames)
+[accept] scene_28 <- renders/tmp_scene_28_try1.mp4 (score=8, lip_ok=True)
+[render] scene_29 attempt 1 seed=42
+[qc] scene_29 try1: lip_ok=True corr=None score=8/10 (32.0min)
+[matte] renders/scene_29.mp4: 40 frames
+[matte] renders/scene_29.mp4: 80 frames
+[matte] renders/scene_29.mp4: 120 frames
+[matte] renders/scene_29.mp4: 160 frames
+[matte] renders/scene_29.mp4: 200 frames
+[matte] renders/scene_29.mp4: 240 frames
+[matte] done renders/scene_29.mp4.matetmp.mp4 (241 frames)
+[accept] scene_29 <- renders/tmp_scene_29_try1.mp4 (score=8, lip_ok=True)
+[render] scene_30 attempt 1 seed=42
+[qc] scene_30 try1: lip_ok=True corr=None score=8/10 (24.9min)
+[matte] renders/scene_30.mp4: 40 frames
+[matte] renders/scene_30.mp4: 80 frames
+[matte] renders/scene_30.mp4: 120 frames
+[matte] renders/scene_30.mp4: 160 frames
+[matte] done renders/scene_30.mp4.matetmp.mp4 (193 frames)
+[accept] scene_30 <- renders/tmp_scene_30_try1.mp4 (score=8, lip_ok=True)
+[render] scene_31 attempt 1 seed=42
+[qc] scene_31 try1: lip_ok=True corr=None score=8/10 (32.2min)
+[matte] renders/scene_31.mp4: 40 frames
+[matte] renders/scene_31.mp4: 80 frames
+[matte] renders/scene_31.mp4: 120 frames
+[matte] renders/scene_31.mp4: 160 frames
+[matte] renders/scene_31.mp4: 200 frames
+[matte] renders/scene_31.mp4: 240 frames
+[matte] done renders/scene_31.mp4.matetmp.mp4 (241 frames)
+[accept] scene_31 <- renders/tmp_scene_31_try1.mp4 (score=8, lip_ok=True)
+[render] scene_32 attempt 1 seed=42
+[qc] scene_32 try1: lip_ok=True corr=None score=8/10 (32.5min)
+[matte] renders/scene_32.mp4: 40 frames
+[matte] renders/scene_32.mp4: 80 frames
+[matte] renders/scene_32.mp4: 120 frames
+[matte] renders/scene_32.mp4: 160 frames
+[matte] renders/scene_32.mp4: 200 frames
+[matte] renders/scene_32.mp4: 240 frames
+[matte] done renders/scene_32.mp4.matetmp.mp4 (241 frames)
+[accept] scene_32 <- renders/tmp_scene_32_try1.mp4 (score=8, lip_ok=True)
+[batch] scenes accepted: 32/32
+Traceback (most recent call last):
+  File "$HOME/clip_project/scripts/finish_movie.py", line 11, in <module>
+    from basicsr.archs.rrdbnet_arch import RRDBNet
+  File "$HOME/clip_project/.venv/lib/python3.11/site-packages/basicsr/__init__.py", line 4, in <module>
+    from .data import *
+  File "$HOME/clip_project/.venv/lib/python3.11/site-packages/basicsr/data/__init__.py", line 22, in <module>
+    _dataset_modules = [importlib.import_module(f'basicsr.data.{file_name}') for file_name in dataset_filenames]
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$HOME/clip_project/.venv/lib/python3.11/site-packages/basicsr/data/__init__.py", line 22, in <listcomp>
+    _dataset_modules = [importlib.import_module(f'basicsr.data.{file_name}') for file_name in dataset_filenames]
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$HOME/.local/share/uv/python/cpython-3.11.18-macos-aarch64-none/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$HOME/clip_project/.venv/lib/python3.11/site-packages/basicsr/data/realesrgan_dataset.py", line 11, in <module>
+    from basicsr.data.degradations import circular_lowpass_kernel, random_mixed_kernels
+  File "$HOME/clip_project/.venv/lib/python3.11/site-packages/basicsr/data/degradations.py", line 8, in <module>
+    from torchvision.transforms.functional_tensor import rgb_to_grayscale
+ModuleNotFoundError: No module named 'torchvision.transforms.functional_tensor'

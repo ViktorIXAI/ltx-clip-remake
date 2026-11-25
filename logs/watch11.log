@@ -1,0 +1,7 @@
+W0000 00:00:1795519111.593646 1990092 face_landmarker_graph.cc:181] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1795519111.595760 1990093 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1795519111.599535 1990108 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+scanned 169 best MAR 1.207
+keyframe replaced (backup .bak)
+PARK_RESUMED

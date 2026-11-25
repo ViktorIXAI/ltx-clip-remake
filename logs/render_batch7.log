@@ -1,0 +1,30 @@
+W0000 00:00:1795571698.995869 2725943 face_landmarker_graph.cc:181] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1795571698.998356 2725945 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1795571699.002673 2725945 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+[skip] scene_01 already accepted
+[skip] scene_02 already accepted
+[skip] scene_03 already accepted
+[skip] scene_04 already accepted
+[skip] scene_05 already accepted
+[skip] scene_06 already accepted
+[skip] scene_07 already accepted
+[skip] scene_08 already accepted
+[skip] scene_09 already accepted
+[skip] scene_10 already accepted
+[skip] scene_11 already accepted
+[skip] scene_12 already accepted
+[skip] scene_13 already accepted
+[skip] scene_14 already accepted
+[skip] scene_15 already accepted
+[skip] scene_16 already accepted
+[skip] scene_17 already accepted
+[skip] scene_18 already accepted
+[skip] scene_19 already accepted
+[skip] scene_20 already accepted
+[skip] scene_21 already accepted
+[render] scene_22 attempt 1 seed=42
+[qc] scene_22 try1: lip_ok=False corr=-0.12 score=8/10 (33.1min)
+[render] scene_22 attempt 2 seed=1337
+$HOME/.local/share/uv/python/cpython-3.11.18-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

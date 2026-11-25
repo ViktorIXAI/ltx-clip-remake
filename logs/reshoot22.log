@@ -1,0 +1,1 @@
+scripts/reshoot22.sh: line 16: 67254 Terminated: 15          RENDER_SEEDS=333 A2V_GUIDANCE=5.0 python scripts/render_scenes_qc.py scene_22 >> logs/fix22b.log 2>&1

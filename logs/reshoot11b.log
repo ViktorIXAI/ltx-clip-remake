@@ -1,0 +1,17 @@
+W0000 00:00:1795519115.166211 1990183 face_landmarker_graph.cc:181] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1795519115.168223 1990186 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1795519115.171940 1990199 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+[render] scene_11 attempt 1 seed=11
+[qc] scene_11 try1: lip_ok=False corr=0.221 score=8/10 (21.3min)
+[render] scene_11 attempt 2 seed=101
+[qc] scene_11 try2: lip_ok=False corr=-0.775 score=8/10 (19.8min)
+[render] scene_11 attempt 3 seed=2024
+[qc] scene_11 try3: lip_ok=True corr=0.297 score=8/10 (19.9min)
+[matte] renders/scene_11.mp4: 40 frames
+[matte] renders/scene_11.mp4: 80 frames
+[matte] renders/scene_11.mp4: 120 frames
+[matte] renders/scene_11.mp4: 160 frames
+[matte] done renders/scene_11.mp4.matetmp.mp4 (169 frames)
+[accept] scene_11 <- renders/tmp_scene_11_try3.mp4 (score=8, lip_ok=True)
+[batch] scenes accepted: 12/32

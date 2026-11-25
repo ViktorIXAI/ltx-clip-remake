@@ -1,0 +1,43 @@
+W0000 00:00:1795561426.673907 2557579 face_landmarker_graph.cc:181] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1795561426.675855 2557581 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1795561426.679334 2557592 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+[skip] scene_01 already accepted
+[skip] scene_02 already accepted
+[skip] scene_03 already accepted
+[skip] scene_04 already accepted
+[skip] scene_05 already accepted
+[skip] scene_06 already accepted
+[skip] scene_07 already accepted
+[skip] scene_08 already accepted
+[skip] scene_09 already accepted
+[skip] scene_10 already accepted
+[skip] scene_11 already accepted
+[skip] scene_12 already accepted
+[skip] scene_13 already accepted
+[skip] scene_14 already accepted
+[skip] scene_15 already accepted
+[skip] scene_16 already accepted
+[skip] scene_17 already accepted
+[skip] scene_18 already accepted
+[skip] scene_19 already accepted
+[skip] scene_20 already accepted
+[skip] scene_21 already accepted
+[skip] scene_22 already accepted
+[render] scene_23 attempt 1 seed=42
+[qc] scene_23 try1: lip_ok=True corr=0.496 score=8/10 (31.4min)
+[matte] renders/scene_23.mp4: 40 frames
+[matte] renders/scene_23.mp4: 80 frames
+[matte] renders/scene_23.mp4: 120 frames
+[matte] renders/scene_23.mp4: 160 frames
+[matte] renders/scene_23.mp4: 200 frames
+[matte] renders/scene_23.mp4: 240 frames
+[matte] done renders/scene_23.mp4.matetmp.mp4 (241 frames)
+[accept] scene_23 <- renders/tmp_scene_23_try1.mp4 (score=8, lip_ok=True)
+[render] scene_24 attempt 1 seed=42
+[qc] scene_24 try1: lip_ok=False corr=-0.481 score=8/10 (24.2min)
+[render] scene_24 attempt 2 seed=1337
+[qc] scene_24 try2: lip_ok=False corr=-1.0 score=8/10 (24.2min)
+[render] scene_24 attempt 3 seed=9001
+$HOME/.local/share/uv/python/cpython-3.11.18-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

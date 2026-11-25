@@ -1,0 +1,37 @@
+W0000 00:00:1795601410.857631 3041771 face_landmarker_graph.cc:181] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1795601410.859443 3041774 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1795601410.862628 3041785 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+[matte] renders/scene_01.mp4 already matted
+[matte] renders/scene_02.mp4 already matted
+[matte] renders/scene_03.mp4 already matted
+[matte] renders/scene_04.mp4 already matted
+[matte] renders/scene_05.mp4 already matted
+[matte] renders/scene_06.mp4 already matted
+[matte] renders/scene_07.mp4 already matted
+[matte] renders/scene_08.mp4 already matted
+[matte] renders/scene_09.mp4 already matted
+[matte] renders/scene_10.mp4 already matted
+[matte] renders/scene_11.mp4 already matted
+[matte] renders/scene_12.mp4 already matted
+[matte] renders/scene_13.mp4 already matted
+[matte] renders/scene_14.mp4 already matted
+[matte] renders/scene_15.mp4 already matted
+[matte] renders/scene_16.mp4 already matted
+[matte] renders/scene_17.mp4 already matted
+[matte] renders/scene_18.mp4 already matted
+[matte] renders/scene_19.mp4 already matted
+[matte] renders/scene_20.mp4 already matted
+[matte] renders/scene_21.mp4 already matted
+[matte] renders/scene_22.mp4 already matted
+[matte] renders/scene_23.mp4 already matted
+[matte] renders/scene_24.mp4 already matted
+[matte] renders/scene_25.mp4 already matted
+[matte] renders/scene_26.mp4 already matted
+[matte] renders/scene_27.mp4 already matted
+[matte] renders/scene_28.mp4 already matted
+[matte] renders/scene_29.mp4 already matted
+[matte] renders/scene_30.mp4 already matted
+[matte] renders/scene_31.mp4 already matted
+[matte] renders/scene_32.mp4 already matted
+[final] renders/FINAL_MASTER_4K.mp4 ready

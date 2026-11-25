@@ -1,0 +1,3 @@
+scripts/reshoot11.sh: line 14: 37503 Terminated: 15          RENDER_SEEDS=777,24601,5150 A2V_GUIDANCE=3.0 python scripts/render_scenes_qc.py scene_11 > logs/reshoot11.log 2>&1
+PART2_KEPT_V1 (scene 11 lipsync failed again)
+BATCH5_STARTED

@@ -1,0 +1,28 @@
+W0000 00:00:1795508923.671220 1832181 face_landmarker_graph.cc:181] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1795508923.673016 1832184 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1795508923.676388 1832197 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+[render] scene_11 attempt 1 seed=7777
+[qc] scene_11 try1: lip_ok=False corr=-0.222 score=8/10 (20.5min)
+[render] scene_11 attempt 2 seed=12121
+[qc] scene_11 try2: lip_ok=False corr=-0.306 score=8/10 (21.1min)
+[render] scene_11 attempt 3 seed=55555
+[qc] scene_11 try3: lip_ok=False corr=-0.257 score=8/10 (20.7min)
+[accept] scene_11 <- renders/tmp_scene_11_try1.mp4 (score=8, lip_ok=False)
+[batch] scenes accepted: 11/32
+W0000 00:00:1795512683.445205 1882284 face_landmarker_graph.cc:181] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1795512683.447134 1882288 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1795512683.450583 1882299 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+[skip] scene_01 already accepted
+[skip] scene_02 already accepted
+[skip] scene_03 already accepted
+[skip] scene_04 already accepted
+[skip] scene_05 already accepted
+[skip] scene_06 already accepted
+[skip] scene_07 already accepted
+[skip] scene_08 already accepted
+[skip] scene_09 already accepted
+[skip] scene_10 already accepted
+[skip] scene_11 already accepted
+[render] scene_12 attempt 1 seed=42

@@ -1,0 +1,7 @@
+W0000 00:00:1795553762.442135 2477165 face_landmarker_graph.cc:181] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1795553762.444314 2477168 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1795553762.447966 2477181 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+scanned 241 best MAR 1.643
+KEYFRAME22_SWAPPED
+scripts/watch22.sh: line 21: 40224 Terminated: 15          nohup bash -c 'source .venv/bin/activate && export PATH=/opt/homebrew/bin:$PATH && python scripts/render_scenes_qc.py && python scripts/finish_movie.py' >> logs/render_batch6c.log 2>&1

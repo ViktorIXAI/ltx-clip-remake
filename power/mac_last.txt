@@ -1,0 +1,9 @@
+WINDOW: 25.11 16:26 — 18:35 (120 samples)
+Temp: CPU max 23 °C, GPU max 22 °C
+Fans: max 0% of max
+Power: system avg 2 W / peak 2 W; GPU peak 0 W
+GPU: load avg 0%, VRAM peak 0 GB
+Memory: RAM used max 7%, pressure max 4%, Swap max 873 MB
+Disk over window: read 25 MB, written 382 MB
+Battery: 80%, on AC, charge 0
+Throttle events: 0; frequency limit: 100%

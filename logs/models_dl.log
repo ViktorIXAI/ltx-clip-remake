@@ -1,0 +1,16 @@
+
+Fetching 3 files:   0%|          | 0/3 [00:00<?, ?it/s]
+Fetching 3 files:  33%|███▎      | 1/3 [01:57<03:55, 117.74s/it]
+Fetching 3 files:  67%|██████▋   | 2/3 [13:42<07:43, 463.07s/it]
+Fetching 3 files: 100%|██████████| 3/3 [25:08<00:00, 564.66s/it]
+Fetching 3 files: 100%|██████████| 3/3 [25:08<00:00, 502.70s/it]
+[32m✓ Downloaded[0m
+  path: $HOME/clip_project/models/LTX-2.3
+
+Fetching 18 files:   0%|          | 0/18 [00:00<?, ?it/s]Still waiting to acquire lock on $HOME/clip_project/models/gemma-3-12b/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+Still waiting to acquire lock on $HOME/clip_project/models/gemma-3-12b/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 18 files:   0%|          | 0/18 [00:00<?, ?it/s]
+[1m[31mError: Access denied. This repository requires approval.[0m
+[90mHint: set HF_DEBUG=1 as environment variable for full traceback.[0m

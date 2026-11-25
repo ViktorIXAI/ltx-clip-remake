@@ -1,0 +1,410 @@
+{
+ "scene_01": [
+  {
+   "scene": "scene_01",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 20.0,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames are visually appealing and capture the romantic moment well. However, there is a slight issue with the mouth of the woman in the third frame, which appears slightly melted or distorted. The other frames appear to be in line with the specified requireme"
+  }
+ ],
+ "scene_02": [
+  {
+   "scene": "scene_02",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 24.1,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames depict a romantic scene with natural expressions and realistic hair movement. The lighting and skin tones are well-rendered, and the sunset rim light adds a warm, cinematic quality. However, there's a slight issue with the mouth closing in the last fra"
+  }
+ ],
+ "scene_03": [
+  {
+   "scene": "scene_03",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 22.9,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames are visually appealing and capture the romantic moment well, but there is a slight issue with the mouth being closed in the first frame, which slightly detracts from the serene romantic expression. The lighting and skin texture appear natural and cinem"
+  }
+ ],
+ "scene_04": [
+  {
+   "scene": "scene_04",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 32.0,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames meet the specified criteria with high quality, but there is a slight issue with the mouth being closed in the last frame, which slightly affects the serene romantic expression.\"\n}\n```"
+  }
+ ],
+ "scene_05": [
+  {
+   "scene": "scene_05",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 24.0,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames depict a cinematic close-up of a woman with a serene expression, soft skin texture, and warm lighting. There are no visible signs of deformed fingers, melted teeth, greasy skin, neon outlines, or squashed faces. The focus is on the woman's face and the"
+  }
+ ],
+ "scene_06": [
+  {
+   "scene": "scene_06",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 24.1,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames meet the specified requirements with a few minor imperfections. The romantic and serene expression is well-captured, and the natural skin texture and warm lighting are evident. However, there's a slight issue with the man's ear in the last frame, which"
+  }
+ ],
+ "scene_07": [
+  {
+   "scene": "scene_07",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 20.7,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames appear to be of high quality with no visible defects. The lighting and composition are consistent with the described cinematic style, and the subjects' expressions and details are well-captured. However, there is a slight issue with the mouth of the wo"
+  }
+ ],
+ "scene_08": [
+  {
+   "scene": "scene_08",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 17.4,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames meet the specified criteria with high quality, but there is a slight issue with the mouth of the woman in the first frame, which appears slightly melted or distorted. The rest of the frames are excellent.\"\n}\n```"
+  }
+ ],
+ "scene_10": [
+  {
+   "scene": "scene_10",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 20.8,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames appear to be of high quality, with no visible issues related to fingers, teeth, skin, or facial distortion. The cinematic lighting and color grading are well-executed, and the natural skin texture and makeup details are captured effectively. The sunset"
+  }
+ ],
+ "scene_11": [
+  {
+   "scene": "scene_11",
+   "attempt": 1,
+   "seed": "2024",
+   "minutes": 20.5,
+   "lip_ok": true,
+   "lip_corr": 0.715,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames depict a close-up of a woman singing and a man looking at her. The skin appears matte and smooth, with no visible shine or sweat. The lighting is soft and natural, and the faces are fully visible without any distortion. The mouth movements and expressi"
+  }
+ ],
+ "scene_13": [
+  {
+   "scene": "scene_13",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 20.0,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The image meets the criteria for a cinematic night photography with a serene romantic expression. However, there is a slight issue with the neon outline artifacts, which slightly detract from the overall score.\"\n}\n```"
+  }
+ ],
+ "scene_14": [
+  {
+   "scene": "scene_14",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 16.9,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The image meets the criteria for romantic dance with natural hand anatomy, smooth motion, and a serene romantic expression. The skin appears natural and matte, and the lighting is soft and cinematic. However, there are some minor artifacts around the neon arch, w"
+  }
+ ],
+ "scene_15": [
+  {
+   "scene": "scene_15",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 18.2,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The image meets the majority of the specified criteria, but there is a slight issue with the reflection of the neon lights, which could be considered a minor artifact. The rest of the elements, such as the feet, skin texture, lighting, and overall composition, ar"
+  }
+ ],
+ "scene_16": [
+  {
+   "scene": "scene_16",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 30.0,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The image meets the specified criteria for a medium shot on the beach at dusk, with the woman twirling gracefully and the man beside her. The silk dress and skin texture appear realistic, and the lighting and bokeh effects are well-executed. However, there is a s"
+  }
+ ],
+ "scene_17": [
+  {
+   "scene": "scene_17",
+   "attempt": 1,
+   "seed": "2024",
+   "minutes": 24.2,
+   "lip_ok": false,
+   "lip_corr": 0.033,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The video frames meet the specified criteria for a high-quality cinematic medium shot. The subjects' faces are fully visible, and their skin appears matte and natural. The lighting is soft and diffused, and the expressions and mouth movements are in sync with the"
+  },
+  {
+   "scene": "scene_17",
+   "attempt": 2,
+   "seed": "7",
+   "minutes": 23.4,
+   "lip_ok": true,
+   "lip_corr": 0.425,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The video frames meet the specified requirements with a few minor adjustments. The skin texture is natural and matte, the lighting is soft and cinematic, and the singers' mouths align with the sung lyrics. However, there is a slight issue with the teeth, which ap"
+  }
+ ],
+ "scene_19": [
+  {
+   "scene": "scene_19",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 23.2,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames meet the specified cinematic quality criteria with the exception of the subtle film grain, which is not explicitly mentioned as a requirement. The natural skin texture, romantic expressions, and overall cinematic lighting are well-executed.\"\n}\n```"
+  }
+ ],
+ "scene_20": [
+  {
+   "scene": "scene_20",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 20.2,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames meet the specified criteria for a medium close-up on the boat at twilight, with the bearded man closing his eyes and the brunette woman looking toward the horizon. The natural twilight tones, soft diffuse cinematic lighting, and the healthy low-sheen s"
+  }
+ ],
+ "scene_21": [
+  {
+   "scene": "scene_21",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 34.9,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames depict a close-up of a woman's face with expressive eyes, natural freckles, and soft skin texture. The lighting is warm and natural, and the skin appears matte and velvety. There are no visible signs of greasy or shiny skin, neon outlines, or squashed "
+  }
+ ],
+ "scene_22": [
+  {
+   "scene": "scene_22",
+   "attempt": 1,
+   "seed": "2024",
+   "minutes": 32.7,
+   "lip_ok": false,
+   "lip_corr": 0.093,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The video frames meet the majority of the specified criteria, but there is a slight issue with the mouth movement and the lack of visible film grain. The mouths do not perfectly sync with the sung lyrics, and there is a lack of visible film grain, which slightly "
+  },
+  {
+   "scene": "scene_22",
+   "attempt": 2,
+   "seed": "7",
+   "minutes": 31.6,
+   "lip_ok": false,
+   "lip_corr": 0.079,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames meet the majority of the specified criteria, but there is a slight issue with the mouth movement and the lack of visible film grain.\"\n}\n```"
+  },
+  {
+   "scene": "scene_22",
+   "attempt": 3,
+   "seed": "333",
+   "minutes": 31.5,
+   "lip_ok": false,
+   "lip_corr": 0.268,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames meet the majority of the specified criteria, but there is a slight issue with the teeth appearing slightly melted or distorted in the third frame. The rest of the frames are excellent, with natural skin texture, soft lighting, and no visible artifacts."
+  },
+  {
+   "scene": "scene_22",
+   "attempt": "boost",
+   "seed": "777",
+   "minutes": 31.4,
+   "lip_ok": false,
+   "lip_corr": -0.261,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames meet the majority of the specified criteria, but there is a slight issue with the mouth movement and the lack of visible teeth during the sung phrase. The skin texture and lighting appear natural and realistic, and the overall composition is intimate a"
+  }
+ ],
+ "scene_23": [
+  {
+   "scene": "scene_23",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 31.4,
+   "lip_ok": true,
+   "lip_corr": 0.496,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames meet the specified criteria for a medium close-up shot with accurate lip sync, natural skin texture, soft lighting, and no visible artifacts. However, there is a slight issue with the man's face in the third frame, where his eye appears slightly squint"
+  }
+ ],
+ "scene_25": [
+  {
+   "scene": "scene_25",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 31.5,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames meet the specified requirements for a medium shot on the night beach with diagonal pink and cyan laser light beams in the sky behind the couple. The woman is singing the chorus facing the bearded man, and the atmospheric concert-like haze is present. T"
+  }
+ ],
+ "scene_26": [
+  {
+   "scene": "scene_26",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 26.2,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames meet the specified criteria for a close-up two-shot with natural skin and hair detail, soft lighting, and no visible artifacts. The singers' mouths align with the sung lyrics, and the faces are fully visible. However, there is a slight issue with the l"
+  }
+ ],
+ "scene_27": [
+  {
+   "scene": "scene_27",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 24.2,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The video frames meet the specified requirements with the exception of the absence of visible mouths, which is not a fail but a specific instruction. The other elements such as the natural skin texture, lighting, and overall cinematic quality are well-executed.\"\n"
+  }
+ ],
+ "scene_28": [
+  {
+   "scene": "scene_28",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 24.3,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The video frames depict a couple dancing in shallow water with a golden hour backdrop. The lighting is soft and natural, creating a romantic and serene atmosphere. The skin appears matte and realistic, with no visible shine or greasiness. The couple's movements a"
+  }
+ ],
+ "scene_29": [
+  {
+   "scene": "scene_29",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 32.0,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The images depict a joyful close-up of a couple singing together with natural radiant matte-satin skin, genuine smiles, and soft diffuse lighting. The skin appears healthy and low-sheen, with visible pores and fine micro-texture. The neon bokeh lights behind them"
+  }
+ ],
+ "scene_30": [
+  {
+   "scene": "scene_30",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 24.9,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames meet the specified criteria for romantic medium shots, with natural skin texture, soft lighting, and a serene romantic expression. However, there is a slight issue with the mouth closed in the last frame, which might be considered a minor flaw.\"\n}\n```"
+  }
+ ],
+ "scene_31": [
+  {
+   "scene": "scene_31",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 30.7,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The image meets the criteria for a medium shot of the couple, with no visible deformed fingers or hands, melted/distorted teeth or mouth, or greasy/sweaty skin. There are no unnatural neon outline artifacts, and the faces appear natural without squashed wide face"
+  }
+ ],
+ "scene_32": [
+  {
+   "scene": "scene_32",
+   "attempt": 1,
+   "seed": "42",
+   "minutes": 32.5,
+   "lip_ok": true,
+   "lip_corr": null,
+   "visual_ok": true,
+   "score": 8,
+   "vlm_note": "```json\n{\n  \"score\": 8,\n  \"reason\": \"The frames depict a serene romantic scene with natural skin texture and soft lighting. However, there is a slight issue with the lighting in the last frame, which appears a bit too dark and lacks the soft, diffused quality expected in the description. The other f"
+  }
+ ]
+}

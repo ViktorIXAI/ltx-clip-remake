@@ -1,0 +1,33 @@
+W0000 00:00:1795492417.912478 1329653 face_landmarker_graph.cc:181] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1795492417.914371 1329657 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1795492417.917716 1329666 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+[skip] scene_01 already accepted
+[render] scene_02 attempt 1 seed=42
+[qc] scene_02 try1: lip_ok=True corr=None score=8/10 (24.1min)
+[accept] scene_02 <- renders/tmp_scene_02_try1.mp4 (score=8, lip_ok=True)
+[render] scene_03 attempt 1 seed=42
+[qc] scene_03 try1: lip_ok=True corr=None score=8/10 (22.9min)
+[accept] scene_03 <- renders/tmp_scene_03_try1.mp4 (score=8, lip_ok=True)
+[render] scene_04 attempt 1 seed=42
+[qc] scene_04 try1: lip_ok=True corr=None score=8/10 (32.0min)
+[accept] scene_04 <- renders/tmp_scene_04_try1.mp4 (score=8, lip_ok=True)
+[render] scene_05 attempt 1 seed=42
+[qc] scene_05 try1: lip_ok=True corr=None score=8/10 (24.0min)
+[accept] scene_05 <- renders/tmp_scene_05_try1.mp4 (score=8, lip_ok=True)
+[render] scene_06 attempt 1 seed=42
+[qc] scene_06 try1: lip_ok=True corr=None score=8/10 (24.1min)
+[accept] scene_06 <- renders/tmp_scene_06_try1.mp4 (score=8, lip_ok=True)
+[render] scene_07 attempt 1 seed=42
+[qc] scene_07 try1: lip_ok=True corr=None score=8/10 (20.7min)
+[accept] scene_07 <- renders/tmp_scene_07_try1.mp4 (score=8, lip_ok=True)
+[render] scene_08 attempt 1 seed=42
+[qc] scene_08 try1: lip_ok=True corr=None score=8/10 (17.4min)
+[accept] scene_08 <- renders/tmp_scene_08_try1.mp4 (score=8, lip_ok=True)
+[skip] scene_09 already accepted
+[render] scene_10 attempt 1 seed=42
+[qc] scene_10 try1: lip_ok=True corr=None score=8/10 (20.8min)
+[accept] scene_10 <- renders/tmp_scene_10_try1.mp4 (score=8, lip_ok=True)
+[render] scene_11 attempt 1 seed=42
+$HOME/.local/share/uv/python/cpython-3.11.18-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

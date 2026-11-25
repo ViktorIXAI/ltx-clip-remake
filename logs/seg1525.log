@@ -1,0 +1,5 @@
+ST=98.5833 T=93.458333 FR=2243
+[in#0/concat @ 0x7748c18000] Impossible to open '/tmp/renders/scene_25.mp4'
+[in#0/concat @ 0x7749014000] Error during demuxing: No such file or directory
+93.458322
+SEG_1525b_READY

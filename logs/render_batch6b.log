@@ -1,0 +1,67 @@
+W0000 00:00:1795541051.907897 2336385 face_landmarker_graph.cc:181] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1795541051.909718 2336386 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1795541051.913173 2336388 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+[skip] scene_01 already accepted
+[skip] scene_02 already accepted
+[skip] scene_03 already accepted
+[skip] scene_04 already accepted
+[skip] scene_05 already accepted
+[skip] scene_06 already accepted
+[skip] scene_07 already accepted
+[skip] scene_08 already accepted
+[skip] scene_09 already accepted
+[skip] scene_10 already accepted
+[skip] scene_11 already accepted
+[skip] scene_12 already accepted
+[skip] scene_13 already accepted
+[skip] scene_14 already accepted
+[skip] scene_15 already accepted
+[skip] scene_16 already accepted
+[skip] scene_17 already accepted
+[skip] scene_18 already accepted
+[render] scene_19 attempt 1 seed=42
+[qc] scene_19 try1: lip_ok=True corr=None score=8/10 (23.2min)
+[matte] renders/scene_19.mp4: 40 frames
+[matte] renders/scene_19.mp4: 80 frames
+[matte] renders/scene_19.mp4: 120 frames
+[matte] renders/scene_19.mp4: 160 frames
+[matte] done renders/scene_19.mp4.matetmp.mp4 (193 frames)
+[accept] scene_19 <- renders/tmp_scene_19_try1.mp4 (score=8, lip_ok=True)
+[render] scene_20 attempt 1 seed=42
+[qc] scene_20 try1: lip_ok=True corr=None score=8/10 (20.2min)
+[matte] renders/scene_20.mp4: 40 frames
+[matte] renders/scene_20.mp4: 80 frames
+[matte] renders/scene_20.mp4: 120 frames
+[matte] renders/scene_20.mp4: 160 frames
+[matte] done renders/scene_20.mp4.matetmp.mp4 (169 frames)
+[accept] scene_20 <- renders/tmp_scene_20_try1.mp4 (score=8, lip_ok=True)
+[render] scene_21 attempt 1 seed=42
+[qc] scene_21 try1: lip_ok=True corr=None score=8/10 (34.9min)
+[matte] renders/scene_21.mp4: 40 frames
+[matte] renders/scene_21.mp4: 80 frames
+[matte] renders/scene_21.mp4: 120 frames
+[matte] renders/scene_21.mp4: 160 frames
+[matte] renders/scene_21.mp4: 200 frames
+[matte] renders/scene_21.mp4: 240 frames
+[matte] done renders/scene_21.mp4.matetmp.mp4 (265 frames)
+[accept] scene_21 <- renders/tmp_scene_21_try1.mp4 (score=8, lip_ok=True)
+[render] scene_22 attempt 1 seed=42
+[qc] scene_22 try1: lip_ok=False corr=-0.257 score=8/10 (32.0min)
+[render] scene_22 attempt 2 seed=1337
+[qc] scene_22 try2: lip_ok=False corr=-0.045 score=8/10 (32.3min)
+[render] scene_22 attempt 3 seed=9001
+[qc] scene_22 try3: lip_ok=False corr=-0.073 score=8/10 (31.9min)
+[render] scene_22 BOOST take a2v=3.0 seed=777
+[qc] scene_22 boost: lip_ok=False corr=0.013 score=8/10 (32.1min)
+[matte] renders/scene_22.mp4: 40 frames
+[matte] renders/scene_22.mp4: 80 frames
+[matte] renders/scene_22.mp4: 120 frames
+[matte] renders/scene_22.mp4: 160 frames
+[matte] renders/scene_22.mp4: 200 frames
+[matte] renders/scene_22.mp4: 240 frames
+[matte] done renders/scene_22.mp4.matetmp.mp4 (241 frames)
+[accept] scene_22 <- renders/tmp_scene_22_try1.mp4 (score=8, lip_ok=False)
+[render] scene_23 attempt 1 seed=42
+$HOME/.local/share/uv/python/cpython-3.11.18-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

@@ -1,0 +1,21 @@
+INFO:ltx_pipelines.utils.constants:Checkpoint declares model_version=2.5.0 (parsed as (2, 5, 0))
+INFO:ltx_pipelines.utils.constants:Checkpoint declares model_version=2.5.0 (parsed as (2, 5, 0))
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "$HOME/clip_project/LTX-2/packages/ltx-pipelines/src/ltx_pipelines/ti2vid_two_stages.py", line 568, in <module>
+    main()
+  File "$HOME/clip_project/.venv/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 158, in inference_mode
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$HOME/clip_project/LTX-2/packages/ltx-pipelines/src/ltx_pipelines/ti2vid_two_stages.py", line 533, in main
+    chunks, _, _ = pipeline.stream_chunks(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "$HOME/clip_project/LTX-2/packages/ltx-pipelines/src/ltx_pipelines/ti2vid_two_stages.py", line 405, in stream_chunks
+    ctx = self._prepare_run(
+          ^^^^^^^^^^^^^^^^^^
+  File "$HOME/clip_project/LTX-2/packages/ltx-pipelines/src/ltx_pipelines/ti2vid_two_stages.py", line 234, in _prepare_run
+    assert_resolution(height=height, width=width, is_two_stage=True)
+  File "$HOME/clip_project/LTX-2/packages/ltx-pipelines/src/ltx_pipelines/utils/helpers.py", line 600, in assert_resolution
+    raise ValueError(
+ValueError: Resolution (720x1280) is not divisible by 64. For two-stage pipelines, height and width must be multiples of 64.

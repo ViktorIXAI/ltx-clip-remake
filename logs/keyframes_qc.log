@@ -1,0 +1,37 @@
+W0000 00:00:1795487074.927668 1017676 face_landmarker_graph.cc:181] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1795487074.931265 1017677 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1795487074.938270 1017692 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+[keyframe] scene_01 -> assets/keyframes_clean/scene_01.png
+[keyframe] scene_02 -> assets/keyframes_clean/scene_02.png
+[keyframe] scene_03 -> assets/keyframes_clean/scene_03.png
+[keyframe] scene_04 -> assets/keyframes_clean/scene_04.png
+[keyframe] scene_05 -> assets/keyframes_clean/scene_05.png
+[keyframe] scene_06 -> assets/keyframes_clean/scene_06.png
+[keyframe] scene_07 -> assets/keyframes_clean/scene_07.png
+[keyframe] scene_08 -> assets/keyframes_clean/scene_08.png
+[keyframe] scene_09 -> assets/keyframes_clean/scene_09.png
+[keyframe] scene_10 -> assets/keyframes_clean/scene_10.png
+[keyframe] scene_11 -> assets/keyframes_clean/scene_11.png
+[keyframe] scene_12 -> assets/keyframes_clean/scene_12.png
+[keyframe] scene_13 -> assets/keyframes_clean/scene_13.png
+[keyframe] scene_14 -> assets/keyframes_clean/scene_14.png
+[keyframe] scene_15 -> assets/keyframes_clean/scene_15.png
+[keyframe] scene_16 -> assets/keyframes_clean/scene_16.png
+[keyframe] scene_17 -> assets/keyframes_clean/scene_17.png
+[keyframe] scene_18 -> assets/keyframes_clean/scene_18.png
+[keyframe] scene_19 -> assets/keyframes_clean/scene_19.png
+[keyframe] scene_20 -> assets/keyframes_clean/scene_20.png
+[keyframe] scene_21 -> assets/keyframes_clean/scene_21.png
+[keyframe] scene_22 -> assets/keyframes_clean/scene_22.png
+[keyframe] scene_23 -> assets/keyframes_clean/scene_23.png
+[keyframe] scene_24 -> assets/keyframes_clean/scene_24.png
+[keyframe] scene_25 -> assets/keyframes_clean/scene_25.png
+[keyframe] scene_26 -> assets/keyframes_clean/scene_26.png
+[keyframe] scene_27 -> assets/keyframes_clean/scene_27.png
+[keyframe] scene_28 -> assets/keyframes_clean/scene_28.png
+[keyframe] scene_29 -> assets/keyframes_clean/scene_29.png
+[keyframe] scene_30 -> assets/keyframes_clean/scene_30.png
+[keyframe] scene_31 -> assets/keyframes_clean/scene_31.png
+[keyframe] scene_32 -> assets/keyframes_clean/scene_32.png
+[keyframes] done: 32

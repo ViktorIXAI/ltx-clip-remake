@@ -1,0 +1,1062 @@
+>> ffmpeg -y -i input/source_clip.mp4 -vn -acodec pcm_s16le -ar 44100 -ac 2 audio/full_mix.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'input/source_clip.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:04:13.27, start: 0.000000, bitrate: 2717 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1696x768, 2584 kb/s, SAR 1:1 DAR 53:24, 24 fps, 24 tbr, 1228800 tbn (default)
+    Metadata:
+      handler_name    : Twitter-vork muxer
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+    Metadata:
+      handler_name    : Twitter-vork muxer
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/full_mix.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0(und): Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s (default)
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+      handler_name    : Twitter-vork muxer
+[out#0/wav @ 0x7b1ac3c300] video:0KiB audio:43630KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.000175%
+size=   43630KiB time=00:04:13.26 bitrate=1411.2kbits/s speed=1.85e+03x elapsed=0:00:00.13    
+>> demucs -n htdemucs_ft --two-stems=vocals -o audio/stems audio/full_mix.wav
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Selected model is a bag of 4 models. You will see that many progress bars per track.
+Separated tracks will be stored in $HOME/clip_project/audio/stems/htdemucs_ft
+Separating track audio/full_mix.wav
+
+  0%|                                                                                  | 0.0/257.4 [00:00<?, ?seconds/s]
+  2%|█▋                                                                       | 5.85/257.4 [00:01<01:25,  2.95seconds/s]
+  5%|███▎                                                                     | 11.7/257.4 [00:02<00:38,  6.40seconds/s]
+  7%|████                                                       | 17.549999999999997/257.4 [00:02<00:24,  9.98seconds/s]
+  9%|██████▋                                                                  | 23.4/257.4 [00:02<00:16, 13.95seconds/s]
+ 11%|████████▏                                                               | 29.25/257.4 [00:02<00:12, 17.64seconds/s]
+ 14%|████████                                                   | 35.099999999999994/257.4 [00:02<00:10, 21.17seconds/s]
+ 16%|█████████▍                                                 | 40.949999999999996/257.4 [00:03<00:08, 24.40seconds/s]
+ 18%|█████████████▎                                                           | 46.8/257.4 [00:03<00:07, 26.69seconds/s]
+ 20%|██████████████▋                                                         | 52.65/257.4 [00:03<00:07, 28.72seconds/s]
+ 23%|████████████████▌                                                        | 58.5/257.4 [00:03<00:06, 29.63seconds/s]
+ 25%|██████████████████                                                      | 64.35/257.4 [00:03<00:06, 31.22seconds/s]
+ 27%|████████████████▎                                           | 70.19999999999999/257.4 [00:03<00:06, 31.15seconds/s]
+ 30%|█████████████████████▎                                                  | 76.05/257.4 [00:04<00:05, 31.77seconds/s]
+ 32%|███████████████████                                         | 81.89999999999999/257.4 [00:04<00:05, 31.38seconds/s]
+ 34%|████████████████████████▌                                               | 87.75/257.4 [00:04<00:05, 31.25seconds/s]
+ 36%|██████████████████████████▌                                              | 93.6/257.4 [00:04<00:05, 31.89seconds/s]
+ 39%|███████████████████████▏                                    | 99.44999999999999/257.4 [00:04<00:04, 31.82seconds/s]
+ 41%|█████████████████████████████▍                                          | 105.3/257.4 [00:04<00:04, 32.49seconds/s]
+ 43%|█████████████████████████▍                                 | 111.14999999999999/257.4 [00:05<00:04, 31.53seconds/s]
+ 45%|████████████████████████████████▋                                       | 117.0/257.4 [00:05<00:04, 31.71seconds/s]
+ 48%|█████████████████████████████████▉                                     | 122.85/257.4 [00:05<00:04, 31.27seconds/s]
+ 50%|████████████████████████████████████                                    | 128.7/257.4 [00:05<00:04, 31.86seconds/s]
+ 52%|██████████████████████████████▊                            | 134.54999999999998/257.4 [00:05<00:03, 32.11seconds/s]
+ 55%|████████████████████████████████▏                          | 140.39999999999998/257.4 [00:06<00:03, 32.14seconds/s]
+ 57%|████████████████████████████████████████▎                              | 146.25/257.4 [00:06<00:03, 32.60seconds/s]
+ 59%|██████████████████████████████████████████▌                             | 152.1/257.4 [00:06<00:03, 31.58seconds/s]
+ 61%|███████████████████████████████████████████▌                           | 157.95/257.4 [00:06<00:03, 31.08seconds/s]
+ 64%|█████████████████████████████████████▌                     | 163.79999999999998/257.4 [00:06<00:03, 30.19seconds/s]
+ 66%|██████████████████████████████████████▉                    | 169.64999999999998/257.4 [00:07<00:02, 30.86seconds/s]
+ 68%|█████████████████████████████████████████████████                       | 175.5/257.4 [00:07<00:02, 31.24seconds/s]
+ 70%|██████████████████████████████████████████████████                     | 181.35/257.4 [00:07<00:02, 31.50seconds/s]
+ 73%|████████████████████████████████████████████████████▎                   | 187.2/257.4 [00:07<00:02, 32.02seconds/s]
+ 75%|████████████████████████████████████████████▎              | 193.04999999999998/257.4 [00:07<00:02, 30.99seconds/s]
+ 77%|█████████████████████████████████████████████▌             | 198.89999999999998/257.4 [00:07<00:01, 31.45seconds/s]
+ 80%|████████████████████████████████████████████████████████▍              | 204.75/257.4 [00:08<00:01, 30.48seconds/s]
+ 82%|██████████████████████████████████████████████████████████▉             | 210.6/257.4 [00:08<00:01, 30.85seconds/s]
+ 84%|███████████████████████████████████████████████████████████▋           | 216.45/257.4 [00:08<00:01, 30.91seconds/s]
+ 86%|██████████████████████████████████████████████████▉        | 222.29999999999998/257.4 [00:08<00:01, 30.71seconds/s]
+ 89%|████████████████████████████████████████████████████▎      | 228.14999999999998/257.4 [00:08<00:00, 30.14seconds/s]
+ 91%|█████████████████████████████████████████████████████████████████▍      | 234.0/257.4 [00:09<00:00, 29.06seconds/s]
+ 93%|██████████████████████████████████████████████████████████████████▏    | 239.85/257.4 [00:09<00:00, 29.94seconds/s]
+ 95%|████████████████████████████████████████████████████████████████████▋   | 245.7/257.4 [00:09<00:00, 29.86seconds/s]
+ 98%|█████████████████████████████████████████████████████████▋ | 251.54999999999998/257.4 [00:09<00:00, 30.35seconds/s]
+100%|████████████████████████████████████████████████████████████████████████| 257.4/257.4 [00:09<00:00, 30.50seconds/s]
+100%|████████████████████████████████████████████████████████████████████████| 257.4/257.4 [00:09<00:00, 25.95seconds/s]
+
+  0%|                                                                                  | 0.0/257.4 [00:00<?, ?seconds/s]
+  2%|█▋                                                                       | 5.85/257.4 [00:00<00:08, 30.70seconds/s]
+  5%|███▎                                                                     | 11.7/257.4 [00:00<00:08, 30.60seconds/s]
+  7%|████                                                       | 17.549999999999997/257.4 [00:00<00:08, 28.02seconds/s]
+  9%|██████▋                                                                  | 23.4/257.4 [00:00<00:08, 28.52seconds/s]
+ 11%|████████▏                                                               | 29.25/257.4 [00:01<00:08, 27.77seconds/s]
+ 14%|████████                                                   | 35.099999999999994/257.4 [00:01<00:07, 28.83seconds/s]
+ 16%|█████████▍                                                 | 40.949999999999996/257.4 [00:01<00:07, 29.70seconds/s]
+ 18%|█████████████▎                                                           | 46.8/257.4 [00:01<00:06, 30.10seconds/s]
+ 20%|██████████████▋                                                         | 52.65/257.4 [00:01<00:06, 30.32seconds/s]
+ 23%|████████████████▌                                                        | 58.5/257.4 [00:01<00:06, 29.28seconds/s]
+ 25%|██████████████████                                                      | 64.35/257.4 [00:02<00:06, 30.04seconds/s]
+ 27%|████████████████▎                                           | 70.19999999999999/257.4 [00:02<00:06, 29.77seconds/s]
+ 30%|█████████████████████▎                                                  | 76.05/257.4 [00:02<00:06, 29.66seconds/s]
+ 32%|███████████████████                                         | 81.89999999999999/257.4 [00:02<00:05, 30.31seconds/s]
+ 34%|████████████████████████▌                                               | 87.75/257.4 [00:02<00:05, 28.61seconds/s]
+ 36%|██████████████████████████▌                                              | 93.6/257.4 [00:03<00:05, 29.10seconds/s]
+ 39%|███████████████████████▏                                    | 99.44999999999999/257.4 [00:03<00:05, 28.56seconds/s]
+ 41%|█████████████████████████████▍                                          | 105.3/257.4 [00:03<00:05, 29.55seconds/s]
+ 43%|█████████████████████████▍                                 | 111.14999999999999/257.4 [00:03<00:04, 29.62seconds/s]
+ 45%|████████████████████████████████▋                                       | 117.0/257.4 [00:03<00:04, 29.24seconds/s]
+ 48%|█████████████████████████████████▉                                     | 122.85/257.4 [00:04<00:04, 30.04seconds/s]
+ 50%|████████████████████████████████████                                    | 128.7/257.4 [00:04<00:04, 29.32seconds/s]
+ 52%|██████████████████████████████▊                            | 134.54999999999998/257.4 [00:04<00:04, 29.83seconds/s]
+ 55%|████████████████████████████████▏                          | 140.39999999999998/257.4 [00:04<00:03, 30.00seconds/s]
+ 57%|████████████████████████████████████████▎                              | 146.25/257.4 [00:04<00:03, 29.41seconds/s]
+ 59%|██████████████████████████████████████████▌                             | 152.1/257.4 [00:05<00:03, 29.15seconds/s]
+ 61%|███████████████████████████████████████████▌                           | 157.95/257.4 [00:05<00:03, 28.31seconds/s]
+ 64%|█████████████████████████████████████▌                     | 163.79999999999998/257.4 [00:05<00:03, 28.87seconds/s]
+ 66%|██████████████████████████████████████▉                    | 169.64999999999998/257.4 [00:05<00:02, 29.73seconds/s]
+ 68%|█████████████████████████████████████████████████                       | 175.5/257.4 [00:05<00:02, 29.01seconds/s]
+ 70%|██████████████████████████████████████████████████                     | 181.35/257.4 [00:06<00:02, 29.73seconds/s]
+ 73%|████████████████████████████████████████████████████▎                   | 187.2/257.4 [00:06<00:02, 28.99seconds/s]
+ 75%|████████████████████████████████████████████▎              | 193.04999999999998/257.4 [00:06<00:02, 29.40seconds/s]
+ 77%|█████████████████████████████████████████████▌             | 198.89999999999998/257.4 [00:06<00:01, 30.08seconds/s]
+ 80%|████████████████████████████████████████████████████████▍              | 204.75/257.4 [00:06<00:01, 29.16seconds/s]
+ 82%|██████████████████████████████████████████████████████████▉             | 210.6/257.4 [00:07<00:01, 29.73seconds/s]
+ 84%|███████████████████████████████████████████████████████████▋           | 216.45/257.4 [00:07<00:01, 28.26seconds/s]
+ 86%|██████████████████████████████████████████████████▉        | 222.29999999999998/257.4 [00:07<00:01, 28.81seconds/s]
+ 89%|████████████████████████████████████████████████████▎      | 228.14999999999998/257.4 [00:07<00:00, 29.70seconds/s]
+ 91%|█████████████████████████████████████████████████████████████████▍      | 234.0/257.4 [00:07<00:00, 29.31seconds/s]
+ 93%|██████████████████████████████████████████████████████████████████▏    | 239.85/257.4 [00:08<00:00, 29.57seconds/s]
+ 95%|████████████████████████████████████████████████████████████████████▋   | 245.7/257.4 [00:08<00:00, 28.67seconds/s]
+ 98%|█████████████████████████████████████████████████████████▋ | 251.54999999999998/257.4 [00:08<00:00, 29.40seconds/s]
+100%|████████████████████████████████████████████████████████████████████████| 257.4/257.4 [00:08<00:00, 30.15seconds/s]
+100%|████████████████████████████████████████████████████████████████████████| 257.4/257.4 [00:08<00:00, 29.40seconds/s]
+
+  0%|                                                                                  | 0.0/257.4 [00:00<?, ?seconds/s]
+  2%|█▋                                                                       | 5.85/257.4 [00:00<00:10, 24.87seconds/s]
+  5%|███▎                                                                     | 11.7/257.4 [00:00<00:09, 26.89seconds/s]
+  7%|████                                                       | 17.549999999999997/257.4 [00:00<00:08, 27.41seconds/s]
+  9%|██████▋                                                                  | 23.4/257.4 [00:00<00:08, 28.52seconds/s]
+ 11%|████████▏                                                               | 29.25/257.4 [00:01<00:07, 29.79seconds/s]
+ 14%|████████                                                   | 35.099999999999994/257.4 [00:01<00:07, 28.97seconds/s]
+ 16%|█████████▍                                                 | 40.949999999999996/257.4 [00:01<00:07, 29.71seconds/s]
+ 18%|█████████████▎                                                           | 46.8/257.4 [00:01<00:07, 29.89seconds/s]
+ 20%|██████████████▋                                                         | 52.65/257.4 [00:01<00:06, 29.68seconds/s]
+ 23%|████████████████▌                                                        | 58.5/257.4 [00:02<00:06, 29.72seconds/s]
+ 25%|██████████████████                                                      | 64.35/257.4 [00:02<00:06, 29.51seconds/s]
+ 27%|████████████████▎                                           | 70.19999999999999/257.4 [00:02<00:06, 29.41seconds/s]
+ 30%|█████████████████████▎                                                  | 76.05/257.4 [00:02<00:06, 29.31seconds/s]
+ 32%|███████████████████                                         | 81.89999999999999/257.4 [00:02<00:06, 28.09seconds/s]
+ 34%|████████████████████████▌                                               | 87.75/257.4 [00:03<00:05, 28.48seconds/s]
+ 36%|██████████████████████████▌                                              | 93.6/257.4 [00:03<00:05, 29.33seconds/s]
+ 39%|███████████████████████▏                                    | 99.44999999999999/257.4 [00:03<00:05, 28.53seconds/s]
+ 41%|█████████████████████████████▍                                          | 105.3/257.4 [00:03<00:05, 29.00seconds/s]
+ 43%|█████████████████████████▍                                 | 111.14999999999999/257.4 [00:03<00:04, 29.44seconds/s]
+ 45%|████████████████████████████████▋                                       | 117.0/257.4 [00:04<00:04, 29.65seconds/s]
+ 48%|█████████████████████████████████▉                                     | 122.85/257.4 [00:04<00:04, 30.17seconds/s]
+ 50%|████████████████████████████████████                                    | 128.7/257.4 [00:04<00:04, 29.88seconds/s]
+ 52%|██████████████████████████████▊                            | 134.54999999999998/257.4 [00:04<00:03, 31.88seconds/s]
+ 55%|████████████████████████████████▏                          | 140.39999999999998/257.4 [00:04<00:03, 31.53seconds/s]
+ 57%|████████████████████████████████████████▎                              | 146.25/257.4 [00:04<00:03, 30.82seconds/s]
+ 59%|██████████████████████████████████████████▌                             | 152.1/257.4 [00:05<00:03, 30.00seconds/s]
+ 61%|███████████████████████████████████████████▌                           | 157.95/257.4 [00:05<00:03, 30.34seconds/s]
+ 64%|█████████████████████████████████████▌                     | 163.79999999999998/257.4 [00:05<00:03, 30.23seconds/s]
+ 66%|██████████████████████████████████████▉                    | 169.64999999999998/257.4 [00:05<00:02, 30.61seconds/s]
+ 68%|█████████████████████████████████████████████████                       | 175.5/257.4 [00:05<00:02, 29.23seconds/s]
+ 70%|██████████████████████████████████████████████████                     | 181.35/257.4 [00:06<00:02, 29.87seconds/s]
+ 73%|████████████████████████████████████████████████████▎                   | 187.2/257.4 [00:06<00:02, 29.29seconds/s]
+ 75%|████████████████████████████████████████████▎              | 193.04999999999998/257.4 [00:06<00:02, 29.69seconds/s]
+ 77%|█████████████████████████████████████████████▌             | 198.89999999999998/257.4 [00:06<00:02, 28.66seconds/s]
+ 80%|████████████████████████████████████████████████████████▍              | 204.75/257.4 [00:06<00:01, 29.08seconds/s]
+ 82%|██████████████████████████████████████████████████████████▉             | 210.6/257.4 [00:07<00:01, 27.45seconds/s]
+ 84%|███████████████████████████████████████████████████████████▋           | 216.45/257.4 [00:07<00:01, 28.40seconds/s]
+ 86%|██████████████████████████████████████████████████▉        | 222.29999999999998/257.4 [00:07<00:01, 28.28seconds/s]
+ 89%|████████████████████████████████████████████████████▎      | 228.14999999999998/257.4 [00:07<00:00, 29.30seconds/s]
+ 91%|█████████████████████████████████████████████████████████████████▍      | 234.0/257.4 [00:07<00:00, 28.92seconds/s]
+ 93%|██████████████████████████████████████████████████████████████████▏    | 239.85/257.4 [00:08<00:00, 30.88seconds/s]
+ 95%|████████████████████████████████████████████████████████████████████▋   | 245.7/257.4 [00:08<00:00, 32.55seconds/s]
+ 98%|█████████████████████████████████████████████████████████▋ | 251.54999999999998/257.4 [00:08<00:00, 34.33seconds/s]
+100%|████████████████████████████████████████████████████████████████████████| 257.4/257.4 [00:08<00:00, 36.09seconds/s]
+100%|████████████████████████████████████████████████████████████████████████| 257.4/257.4 [00:08<00:00, 29.96seconds/s]
+
+  0%|                                                                                  | 0.0/257.4 [00:00<?, ?seconds/s]
+  2%|█▋                                                                       | 5.85/257.4 [00:00<00:06, 40.70seconds/s]
+  5%|███▎                                                                     | 11.7/257.4 [00:00<00:05, 41.36seconds/s]
+  7%|████                                                       | 17.549999999999997/257.4 [00:00<00:05, 41.40seconds/s]
+  9%|██████▋                                                                  | 23.4/257.4 [00:00<00:05, 41.38seconds/s]
+ 11%|████████▏                                                               | 29.25/257.4 [00:00<00:05, 41.94seconds/s]
+ 14%|████████                                                   | 35.099999999999994/257.4 [00:00<00:05, 42.22seconds/s]
+ 16%|█████████▍                                                 | 40.949999999999996/257.4 [00:00<00:05, 41.77seconds/s]
+ 18%|█████████████▎                                                           | 46.8/257.4 [00:01<00:05, 41.46seconds/s]
+ 20%|██████████████▋                                                         | 52.65/257.4 [00:01<00:04, 41.43seconds/s]
+ 23%|████████████████▌                                                        | 58.5/257.4 [00:01<00:04, 41.13seconds/s]
+ 25%|██████████████████                                                      | 64.35/257.4 [00:01<00:04, 40.69seconds/s]
+ 27%|████████████████▎                                           | 70.19999999999999/257.4 [00:01<00:04, 40.78seconds/s]
+ 30%|█████████████████████▎                                                  | 76.05/257.4 [00:01<00:04, 40.52seconds/s]
+ 32%|███████████████████                                         | 81.89999999999999/257.4 [00:01<00:04, 40.35seconds/s]
+ 34%|████████████████████████▌                                               | 87.75/257.4 [00:02<00:04, 40.29seconds/s]
+ 36%|██████████████████████████▌                                              | 93.6/257.4 [00:02<00:04, 39.80seconds/s]
+ 39%|███████████████████████▏                                    | 99.44999999999999/257.4 [00:02<00:03, 39.90seconds/s]
+ 41%|█████████████████████████████▍                                          | 105.3/257.4 [00:02<00:03, 40.01seconds/s]
+ 43%|█████████████████████████▍                                 | 111.14999999999999/257.4 [00:02<00:03, 40.06seconds/s]
+ 45%|████████████████████████████████▋                                       | 117.0/257.4 [00:02<00:03, 39.88seconds/s]
+ 48%|█████████████████████████████████▉                                     | 122.85/257.4 [00:03<00:03, 39.64seconds/s]
+ 50%|████████████████████████████████████                                    | 128.7/257.4 [00:03<00:03, 39.46seconds/s]
+ 52%|██████████████████████████████▊                            | 134.54999999999998/257.4 [00:03<00:03, 39.61seconds/s]
+ 55%|████████████████████████████████▏                          | 140.39999999999998/257.4 [00:03<00:02, 39.61seconds/s]
+ 57%|████████████████████████████████████████▎                              | 146.25/257.4 [00:03<00:02, 39.56seconds/s]
+ 59%|██████████████████████████████████████████▌                             | 152.1/257.4 [00:03<00:02, 39.33seconds/s]
+ 61%|███████████████████████████████████████████▌                           | 157.95/257.4 [00:03<00:02, 39.45seconds/s]
+ 64%|█████████████████████████████████████▌                     | 163.79999999999998/257.4 [00:04<00:02, 39.63seconds/s]
+ 66%|██████████████████████████████████████▉                    | 169.64999999999998/257.4 [00:04<00:02, 39.67seconds/s]
+ 68%|█████████████████████████████████████████████████                       | 175.5/257.4 [00:04<00:02, 39.66seconds/s]
+ 70%|██████████████████████████████████████████████████                     | 181.35/257.4 [00:04<00:01, 39.70seconds/s]
+ 73%|████████████████████████████████████████████████████▎                   | 187.2/257.4 [00:04<00:01, 39.85seconds/s]
+ 75%|████████████████████████████████████████████▎              | 193.04999999999998/257.4 [00:04<00:01, 40.02seconds/s]
+ 77%|█████████████████████████████████████████████▌             | 198.89999999999998/257.4 [00:04<00:01, 37.20seconds/s]
+ 80%|████████████████████████████████████████████████████████▍              | 204.75/257.4 [00:05<00:01, 35.38seconds/s]
+ 82%|██████████████████████████████████████████████████████████▉             | 210.6/257.4 [00:05<00:01, 31.78seconds/s]
+ 84%|███████████████████████████████████████████████████████████▋           | 216.45/257.4 [00:05<00:01, 30.10seconds/s]
+ 86%|██████████████████████████████████████████████████▉        | 222.29999999999998/257.4 [00:05<00:01, 27.95seconds/s]
+ 89%|████████████████████████████████████████████████████▎      | 228.14999999999998/257.4 [00:06<00:01, 28.66seconds/s]
+ 91%|█████████████████████████████████████████████████████████████████▍      | 234.0/257.4 [00:06<00:00, 27.65seconds/s]
+ 93%|██████████████████████████████████████████████████████████████████▏    | 239.85/257.4 [00:06<00:00, 28.54seconds/s]
+ 95%|████████████████████████████████████████████████████████████████████▋   | 245.7/257.4 [00:06<00:00, 27.83seconds/s]
+ 98%|█████████████████████████████████████████████████████████▋ | 251.54999999999998/257.4 [00:06<00:00, 28.62seconds/s]
+100%|████████████████████████████████████████████████████████████████████████| 257.4/257.4 [00:07<00:00, 28.36seconds/s]
+100%|████████████████████████████████████████████████████████████████████████| 257.4/257.4 [00:07<00:00, 36.32seconds/s]
+>> ffmpeg -y -ss 0.000000 -t 7.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_01_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x76b6c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_01_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x76b6c20240] video:0KiB audio:1213KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.006279%
+size=    1213KiB time=00:00:07.04 bitrate=1411.3kbits/s speed=4.48e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 7.041667 -t 8.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_02_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x79d4c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_02_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x79d4c20240] video:0KiB audio:1385KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.005499%
+size=    1385KiB time=00:00:08.04 bitrate=1411.3kbits/s speed=5.97e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 15.083333 -t 7.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_03_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x7714c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_03_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x7714c1c240] video:0KiB audio:1213KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.006279%
+size=    1213KiB time=00:00:07.04 bitrate=1411.3kbits/s speed=5.45e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 22.125000 -t 6.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_04_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x79b8c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_04_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x79b9014240] video:0KiB audio:1041KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.007319%
+size=    1041KiB time=00:00:06.04 bitrate=1411.3kbits/s speed=4.3e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 28.166667 -t 7.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_05_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x753f010180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_05_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x753f008780] video:0KiB audio:1213KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.006279%
+size=    1213KiB time=00:00:07.04 bitrate=1411.3kbits/s speed=4.83e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 35.208333 -t 8.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_06_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x7afac10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_06_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x7afac1c240] video:0KiB audio:1385KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.005499%
+size=    1385KiB time=00:00:08.04 bitrate=1411.3kbits/s speed=5.9e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 43.250000 -t 7.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_07_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x7778c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_07_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x7778c20240] video:0KiB audio:1213KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.006279%
+size=    1213KiB time=00:00:07.04 bitrate=1411.3kbits/s speed=5.19e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 50.291667 -t 6.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_08_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x76c3010180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_08_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x76c3008780] video:0KiB audio:1041KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.007319%
+size=    1041KiB time=00:00:06.04 bitrate=1411.3kbits/s speed=4.98e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 56.333333 -t 6.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_09_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x7714c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_09_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x7715014240] video:0KiB audio:1041KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.007319%
+size=    1041KiB time=00:00:06.04 bitrate=1411.3kbits/s speed=3.94e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 62.375000 -t 7.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_10_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x793ac10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_10_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x793ac20240] video:0KiB audio:1213KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.006279%
+size=    1213KiB time=00:00:07.04 bitrate=1411.3kbits/s speed=5.72e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 69.416667 -t 7.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_11_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x7572c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_11_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x7573014240] video:0KiB audio:1213KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.006279%
+size=    1213KiB time=00:00:07.04 bitrate=1411.3kbits/s speed=4.97e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 76.458333 -t 9.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_12_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x7c72c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_12_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x7c73014240] video:0KiB audio:1558KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.004890%
+size=    1558KiB time=00:00:09.04 bitrate=1411.3kbits/s speed=4.69e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 85.500000 -t 7.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_13_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x7716c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_13_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x7717014240] video:0KiB audio:1213KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.006279%
+size=    1213KiB time=00:00:07.04 bitrate=1411.3kbits/s speed=4.55e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 92.541667 -t 6.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_14_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x783cc10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_14_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x783cc20240] video:0KiB audio:1041KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.007319%
+size=    1041KiB time=00:00:06.04 bitrate=1411.3kbits/s speed=5.03e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 98.583333 -t 6.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_15_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x771ac10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_15_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x771ac20240] video:0KiB audio:1041KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.007319%
+size=    1041KiB time=00:00:06.04 bitrate=1411.3kbits/s speed=4.91e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 104.625000 -t 7.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_16_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x74f2c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_16_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x74f3014240] video:0KiB audio:1213KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.006279%
+size=    1213KiB time=00:00:07.04 bitrate=1411.3kbits/s speed=4.87e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 111.666667 -t 8.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_17_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x7beac10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_17_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x7beac20240] video:0KiB audio:1385KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.005499%
+size=    1385KiB time=00:00:08.04 bitrate=1411.3kbits/s speed=5.35e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 119.708333 -t 10.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_18_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x74dec10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_18_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x74dec20240] video:0KiB audio:1730KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.004403%
+size=    1730KiB time=00:00:10.04 bitrate=1411.3kbits/s speed=6.96e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 129.750000 -t 8.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_19_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x78a4c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_19_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x78a4c1c240] video:0KiB audio:1385KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.005499%
+size=    1385KiB time=00:00:08.04 bitrate=1411.3kbits/s speed=5e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 137.791667 -t 7.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_20_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x790b010180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_20_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x790b008780] video:0KiB audio:1213KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.006279%
+size=    1213KiB time=00:00:07.04 bitrate=1411.3kbits/s speed=5.38e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 144.833333 -t 11.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_21_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x7678c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_21_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x7679014240] video:0KiB audio:1902KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.004005%
+size=    1902KiB time=00:00:11.04 bitrate=1411.3kbits/s speed=6.04e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 155.875000 -t 10.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_22_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x7531010180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_22_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x7531008780] video:0KiB audio:1730KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.004403%
+size=    1730KiB time=00:00:10.04 bitrate=1411.3kbits/s speed=5.8e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 165.916667 -t 10.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_23_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x7cfb010180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_23_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x7cfb008780] video:0KiB audio:1730KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.004403%
+size=    1730KiB time=00:00:10.04 bitrate=1411.3kbits/s speed=6.18e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 175.958333 -t 8.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_24_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x77dac10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_24_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x77dac20240] video:0KiB audio:1385KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.005499%
+size=    1385KiB time=00:00:08.04 bitrate=1411.3kbits/s speed=5.74e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 184.000000 -t 8.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_25_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x74b8c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_25_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x74b8c1c240] video:0KiB audio:1385KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.005499%
+size=    1385KiB time=00:00:08.04 bitrate=1411.3kbits/s speed=5.47e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 192.041667 -t 8.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_26_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x74acc10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_26_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x74acc1c240] video:0KiB audio:1385KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.005499%
+size=    1385KiB time=00:00:08.04 bitrate=1411.3kbits/s speed=5.99e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 200.083333 -t 8.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_27_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x7798c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_27_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x7798c1c240] video:0KiB audio:1385KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.005499%
+size=    1385KiB time=00:00:08.04 bitrate=1411.3kbits/s speed=3.98e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 208.125000 -t 8.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_28_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x76a8c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_28_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x76a8c1c240] video:0KiB audio:1385KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.005499%
+size=    1385KiB time=00:00:08.04 bitrate=1411.3kbits/s speed=4.95e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 216.166667 -t 10.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_29_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x770cc10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_29_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x770cc20240] video:0KiB audio:1730KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.004403%
+size=    1730KiB time=00:00:10.04 bitrate=1411.3kbits/s speed=5.91e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 226.208333 -t 8.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_30_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x79d0c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_30_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x79d0c20240] video:0KiB audio:1385KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.005499%
+size=    1385KiB time=00:00:08.04 bitrate=1411.3kbits/s speed=5.34e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 234.250000 -t 10.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_31_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x7886c10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_31_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x7886c20240] video:0KiB audio:1730KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.004403%
+size=    1730KiB time=00:00:10.04 bitrate=1411.3kbits/s speed=5.65e+03x elapsed=0:00:00.00    
+>> ffmpeg -y -ss 244.291667 -t 10.041667 -i audio/stems/htdemucs_ft/full_mix/vocals.wav -acodec pcm_s16le -ar 44100 audio/clips/scene_32_vocals.wav
+ffmpeg version 9.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.4.1.1)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --disable-libxcb --disable-xlib --enable-neon
+  libavutil      61. 19.100 / 61. 19.100
+  libavcodec     63. 24.100 / 63. 24.100
+  libavformat    63. 16.100 / 63. 16.100
+  libavdevice    63.  5.100 / 63.  5.100
+  libavfilter    12.  8.100 / 12.  8.100
+  libswscale     10.  5.100 / 10.  5.100
+  libswresample   7.  6.100 /  7.  6.100
+[aist#0:0/pcm_s16le @ 0x78eec10180] Guessed Channel Layout: stereo
+Input #0, wav, from 'audio/stems/htdemucs_ft/full_mix/vocals.wav':
+  Duration: 00:04:13.27, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'audio/clips/scene_32_vocals.wav':
+  Metadata:
+    ISFT            : Lavf63.16.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc63.24.100 pcm_s16le
+[out#0/wav @ 0x78ef014240] video:0KiB audio:1547KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.004925%
+size=    1547KiB time=00:00:08.97 bitrate=1411.3kbits/s speed=6.03e+03x elapsed=0:00:00.00    
+Done: 32 scenes, duration 254.33 s.
