@@ -38,6 +38,7 @@ ordering-accurate to the minute.
 | 25.11 11:10 | Final master v2 (no upscale, rgb-correct, mobile copy 41 MB) delivered | `logs/finish5.log` |
 | 25.11 ~21:30 | MAGI-2 (Sand AI, 24.11 release) evaluated for the pipeline: cloud API only, $0.08/s, weights unreleased — fits Route A, not local | FINDINGS, `docs/EXTERNAL_AUDIT_GEMINI.md` |
 | 25.11 22:33 | Independent external audit (Gemini) of the master received: frame-level defect map, 4.9/10 confirmed, hybrid V2 architecture proposed; published as received | `docs/EXTERNAL_AUDIT_GEMINI.md` |
+| 25.11 23:0x | Full audit file delivered (post-mortem + YAML tech spec for `claryel-video-factory-v2`); published as the canonical doc, spec adopted into agent procedure | `docs/POSTMORTEM_AND_V2_ARCHITECTURE.md` |
 
 Energy over the whole window: 1.48 kWh monitored, 0 throttle events — see
 `power/` and `docs/HARDWARE_POWER.md`.

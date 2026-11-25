@@ -2,7 +2,7 @@
 
 This document is an **external audit** produced by Google Gemini ("Gemini Neon") on 2026-11-25, pasted into the project chat by the owner and reproduced here in translation. It is published verbatim in substance: the defect map, the process postmortem, the two proposed production pipelines, and the V1-vs-V2 economics are the auditor's, not ours. Where our own measurements disagree with the auditor's claims we note it inline.
 
-Transmission note: the source paste was truncated — section 7 (the ready-to-implement V2 spec) and section 8 (publishing instructions) were cut off mid-sentence and are marked below. Some glyph/number characters were lost in the paste; those spots are marked `[glyph lost in paste]`.
+Transmission note: the source paste was truncated — section 7 (the ready-to-implement V2 spec) and section 8 (publishing instructions) were cut off mid-sentence and are marked below. Some glyph/number characters were lost in the paste; those spots are marked `[glyph lost in paste]`. **Update:** the complete document was later delivered as a file and is published, with all previously lost numbers restored, as the canonical `docs/POSTMORTEM_AND_V2_ARCHITECTURE.md`; this file is kept as the first-received copy.
 
 ---
 

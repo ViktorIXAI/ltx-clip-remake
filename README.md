@@ -55,6 +55,9 @@ per-request segment cuts → concat + single audio track (`full_mix`).
 - `docs/EXTERNAL_AUDIT_GEMINI.md` — independent external audit of the finished
   clip (frame-level defect map, confirms the 4.9/10) and the proposed hybrid
   V2 pipeline. External text, published for the record.
+- `docs/POSTMORTEM_AND_V2_ARCHITECTURE.md` — the auditor's COMPLETE document
+  (canonical version): the full post-mortem plus the ready YAML technical
+  spec (`claryel-video-factory-v2`) handed to the agent as the migration spec.
 - `spec/` — master spec (English translation), `manifest.json`, `scenes.json`
   (the actual prompts fed to LTX, final v5 state).
 - `NOTICE.md` — what is intentionally not published and why.
