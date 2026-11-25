@@ -63,3 +63,20 @@ F13. **Energy never limited this workload.** 20+ h of a 22B model on a
 128 GB MacBook: 0 throttle events, 45.5 W average, 1.48 kWh total, peak
 temps inside the normal corridor (`power/`). Unified memory was the binding
 requirement (75 GB model dir, ~60+ GB working set), not clock speed.
+
+F14. **Gated weights are an engineering risk equal to benchmarks.**
+LTX-2.3's text encoder (`google/gemma-3-12b`) returned "Access denied.
+This repository requires approval." mid-setup (24.11 03:18,
+`logs/models_dl.log`); the whole stack swapped to LTX-2.5 within minutes
+(`logs/gemma_dl.log`, `model_version=2.5.0` in first-run stderr). Check
+license approval state of every required repo before a stack is planned,
+not after the transformer is already downloaded.
+
+F15. **"N steps" is per window; wall clock is per project.** The 4-step
+pi-H3 still cost 7.7–24.6 min per 192–362-frame scene on a 24 GB card
+(sibling repo RUNLOG); Wan2.2-S2V cost 3.1–3.3 card-min per second of
+footage in 2.2 s windows; LTX-2.5 here is ≈2–3 card-min/s but in 6–11 s
+windows with identity+lip-sync in one pass. For long-form, window length,
+offload pressure and shared-card constraints dominate — sampling-step
+count does not. This is the arithmetic that moved the project to a
+128 GB machine (`docs/PHASE0_PI_H3.md`).

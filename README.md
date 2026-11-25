@@ -9,6 +9,17 @@ produced: spec, manifests, scripts (final + historical iterations), raw run
 logs, the QC report, and machine power telemetry. No media files are published
 (source footage and renders are third-party / derivative content).
 
+**This was not the first attempt.** The experiment began on 22.11 on a
+different computer (RTX 5090 Laptop box) with **pi-H3** — the 4-step
+distillation of MiniMax H3 released 21.11 — per the owner's own kickoff
+brief, then went through a Wan2.2-S2V lip-sync phase on the same box.
+Why the line moved to Apple Silicon and to LTX-2.5 (shared GPU with the
+house LLM, 24 GB VRAM ceiling, one-model capability gap, and a gated
+text encoder that killed LTX-2.3 mid-setup) is documented end-to-end in
+[`docs/PHASE0_PI_H3.md`](docs/PHASE0_PI_H3.md). The full technical notes
+of that first phase are in the sibling repo
+`ViktorIXAI/video-assembly-experiments`.
+
 ## Headline numbers
 
 | Metric | Value |
@@ -30,6 +41,9 @@ per-request segment cuts → concat + single audio track (`full_mix`).
 
 ## Repo map
 
+- `docs/PHASE0_PI_H3.md` — the whole prehistory: pi-H3 (21.11 release) on
+  the NVIDIA box, the owner's kickoff brief, scene-by-scene card times,
+  the S2V phase, and the measured reasons for both switches.
 - `docs/METHODOLOGY.md` — how the pipeline was designed, why each part exists.
 - `docs/TIMELINE.md` — dated sequence of every batch, fix and decision.
 - `docs/USER_FEEDBACK.md` — every owner instruction, translated to English

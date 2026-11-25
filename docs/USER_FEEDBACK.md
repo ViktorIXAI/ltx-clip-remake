@@ -7,6 +7,15 @@ profanity is removed. "Trigger" = the artifact being reviewed when the message
 was sent. Provenance: the owner reviews only the cuts rendered by this
 pipeline and delivered over chat; no external references were used.
 
+## Before this repository (Phase 0, details in `PHASE0_PI_H3.md`)
+
+| # | Instruction (EN, de-profaned) | Trigger → what changed |
+|---|---|---|
+| 0.1 | 22.11 ~21:23 — "After the download, installation and tool checks, give me a detailed readiness report, then run this job and estimate the time on my hardware: autonomously generate a full 4:10 (250 s) music video 'Neon Over the Water' through the local ComfyUI API on the pi-H3 model, then assemble it with my original audio via ffmpeg. 768p 20:9, 24 fps, steps=4, DWD on, guidance 1.0; if reference-image conditioning exists, generate character refs, otherwise use a hard global style+cast block in every prompt; 22 scenes with exact durations; resume support; log per-scene time and peak VRAM; downgrade on OOM." | pi-H3 weights + ComfyUI support released 21.11 (owner named the model). → night run `neon-water-001` on the RTX 5090 Laptop box: 22 scenes, 305.5 min card for 21, two assemblies; full record in sibling repo `video-assembly-experiments`. |
+| 0.2 | 23.11 07:38 — new brief ("hybrid-ai-001"), handed over with "take the whole job, do not ask again". | The finished night clip mixed the song onto non-singing mouths. → lip-sync war on the NVIDIA box: LatentSync/lipsync passes, then Wan2.2-S2V-14B (measured 6.8–7.8 min per 2.2 s window); its numbers fed the decision to move machines — see `PHASE0_PI_H3.md`. |
+
+## This repository
+
 | # | Instruction (EN, de-profaned) | Trigger → what changed |
 |---|---|---|
 | 1 | "Sound must be laid on with an exact hit — that is entirely possible with our technology." | Kickoff rule. → frame math: audio cut at exactly N/24 s per scene, 24 fps locked, single master track (`spec/`). |

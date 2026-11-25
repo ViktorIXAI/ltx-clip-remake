@@ -1,5 +1,11 @@
 # Timeline (CET, log-derived)
 
+Prehistory (22.11 21:09 → 24.11 02:26, on the NVIDIA box): pi-H3 4-step
+night run "neon-water-001" (22 scenes, 305.5 min card for 21), LatentSync
+and lipsync-pass attempts, Wan2.2-S2V phase — fully dated in
+`docs/PHASE0_PI_H3.md` and in the sibling repo `video-assembly-experiments`.
+The table below starts with this repository's engine.
+
 Session began 23.11 evening (spec authoring). Log modification times below are
 UTC+1 and come from `logs/` file mtimes on the render machine; they are
 ordering-accurate to the minute.
