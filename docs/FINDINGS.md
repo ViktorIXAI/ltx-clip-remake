@@ -80,3 +80,24 @@ windows with identity+lip-sync in one pass. For long-form, window length,
 offload pressure and shared-card constraints dominate — sampling-step
 count does not. This is the arithmetic that moved the project to a
 128 GB machine (`docs/PHASE0_PI_H3.md`).
+
+F16. **Our QC gates measured what was easy to measure, not what the viewer
+sees.** An independent frame-level audit (`docs/EXTERNAL_AUDIT_GEMINI.md`)
+confirmed 4.9/10 while every automatic gate had passed: MediaPipe corr and the
+matte formula are blind to time-of-day regressions (02:12, 03:20), an 11 s
+motion freeze (03:52–04:03), literal-neon background slop (01:46), hand
+artifacts (03:48) and synchronized-to-camera smiles. Goodhart in the wild.
+V2 counters: optical-flow motion floor, ArcFace identity lock, lighting
+continuity vs a declared timeline, and hard cuts on a downbeat grid.
+
+F17. **One local model was asked to do everything — that was the budget
+error, not the hardware.** The MixAI principle we publish says: local for
+drafts/unlimited iteration/private data, cloud for the quality ceiling where
+cost-per-result wins. A clip with no privacy constraint routed 100% local
+gave 32 h and a 4.9 ceiling; the audited hybrid plan (local Route B for 50–60%
+of shots, cloud for vocal close-ups and complex physics) projects 8.8–9.6/10
+for €25–65 API. Related: MAGI-2 (24.11) fits exactly that vocal/hero route —
+API $0.08/s (whole 4-min clip ≈ $20), start/end frames + audio refs — but has
+no open weights, so it is a cloud decision, never a local one. The missing
+pre-render gate is the keyframe-first **animatic**: the whole defect map above
+would have been caught on stills in 5 minutes of human review.

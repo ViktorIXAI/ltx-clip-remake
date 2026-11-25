@@ -52,6 +52,9 @@ per-request segment cuts → concat + single audio track (`full_mix`).
   their evolution; per-scene results.
 - `docs/HARDWARE_POWER.md` — machine, model stack, versions, energy/thermal data.
 - `docs/FINDINGS.md` — lessons, each tied to the log lines that prove it.
+- `docs/EXTERNAL_AUDIT_GEMINI.md` — independent external audit of the finished
+  clip (frame-level defect map, confirms the 4.9/10) and the proposed hybrid
+  V2 pipeline. External text, published for the record.
 - `spec/` — master spec (English translation), `manifest.json`, `scenes.json`
   (the actual prompts fed to LTX, final v5 state).
 - `NOTICE.md` — what is intentionally not published and why.
