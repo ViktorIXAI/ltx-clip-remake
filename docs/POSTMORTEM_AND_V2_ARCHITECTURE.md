@@ -192,13 +192,14 @@ A structured specification that can be handed directly to an agent to build a ne
 
 ```yaml
 project: claryel-video-factory-v2
-architecture: hybrid-mixai # Sole local worker = M5 Max (drafts, B-roll, QC, grading); Cloud APIs for hero & singing vocal shots
+architecture: hybrid-mixai # Role-swap rule: while the NVIDIA box renders, the brain runs on the M5 Max; one box never plays both roles at once
 hardware_allocation:
-  # Operator directive: the NVIDIA box is permanently EXCLUDED from the video-factory
-  # pool and must never be powered off or interrupted. It is only the business LLM brain.
-  nvidia_rtx5090_24gb: "NOT a render worker: primary LLM brain (Basalt/Strata) only. Never interrupted, never powered down, never scheduled for video work."
-  mac_m5_max_128gb: "Sole local worker, runs the whole local pipeline SEQUENTIALLY (one GPU stage at a time): Audio stems (BS-RoFormer/Demucs), BPM grid, WhisperX phonemes, LTX-2.5 drafts/B-roll, local lip-sync fallback, SeedVR2 upscale, Qwen2.5-VL QC, FFmpeg/Remotion mastering, LUT/grain, loudness"
-  spare_box_on_request: "If the local lip-sync fallback or SeedVR2 proves impractical on Apple Silicon, ask the operator for a spare Linux+NVIDIA machine instead of touching the brain box."
+  # Operator directive 26.11.2026: the two boxes swap roles on demand. The NVIDIA box is
+  # NEVER powered off and the brain is never interrupted in place; render work on it starts
+  # only after the brain has been moved to the Mac and proven (and back after the render).
+  nvidia_rtx5090_24gb: "Brain host (Basalt/Strata). Never powered off. Doubles as render worker ONLY while the brain is parked/moved to the Mac (keep-up cron commented, VRAM verified free)."
+  mac_m5_max_128gb: "Brain host during render windows (Strata iq3_s, launchd com.claryel.strata-qwen, :8080); otherwise the local pipeline worker running SEQUENTIALLY (one GPU stage at a time): Audio stems (BS-RoFormer/Demucs), BPM grid, WhisperX phonemes, LTX-2.5 drafts/B-roll, SeedVR2 upscale, Qwen2.5-VL QC, FFmpeg/Remotion mastering, LUT/grain, loudness"
+  spare_box_on_request: "If neither box can take a stage, ask the operator for a spare Linux+NVIDIA machine instead of overlapping roles on the two fleet boxes."
 
 tracks:
   commercial_claryel:
@@ -229,14 +230,13 @@ tracks:
       4_mixai_shot_router:
         route_A_vocal_closeup:
           audio_input: "vocals_dry.wav (isolated stem ONLY)"
+          # CUDA-only fallbacks: run on the NVIDIA box during a render window (brain on the Mac).
           primary_cloud: ["OmniHuman-2.0", "Seedance-2.5-A2V", "Sync-3"]
-          # CUDA-only fallbacks: UNAVAILABLE while the sole local worker is Apple Silicon.
-          # Route A then ships 100% via the cloud engines, or the operator attaches a spare Linux+NVIDIA box.
           fallback_local: ["LiveAvatar-4step", "Wan2.2-S2V", "LatentSync-1.6"]
-          fallback_local_requires: "Linux + NVIDIA (MPS port not viable at 18 GB weights); disabled by default"
+          fallback_local_requires: "Linux + NVIDIA (P2005 while the brain is parked/moved to the Mac)"
         route_B_atmosphere_broll:
           primary_local: ["LTX-2.5 (First+Last frame lock)"]
-          secondary_local: ["pi-H3 (4 steps)"] # only if a spare NVIDIA box is attached
+          secondary_local: ["pi-H3 (4 steps)"] # on the NVIDIA box during a render window
         route_C_complex_motion:
           primary_cloud: ["Kling-4.0", "Seedance-2.5", "Veo-3.1"]
       5_qc_gate_v2:
