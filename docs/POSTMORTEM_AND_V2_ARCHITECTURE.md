@@ -192,10 +192,13 @@ A structured specification that can be handed directly to an agent to build a ne
 
 ```yaml
 project: claryel-video-factory-v2
-architecture: hybrid-mixai # Local (M5 Max / P2005) for drafts, B-roll, QC, grading; Cloud APIs for hero & singing vocal shots
+architecture: hybrid-mixai # Sole local worker = M5 Max (drafts, B-roll, QC, grading); Cloud APIs for hero & singing vocal shots
 hardware_allocation:
-  p2005_rtx5090_24gb: "DO NOT interrupt primary LLM brain (Basalt/Strata) unless explicitly scheduled"
-  mac_m5_max_128gb: "Primary local worker: Audio stems (BS-RoFormer/Demucs), WhisperX, LTX-2.5 drafts/B-roll, SeedVR2 upscale, Qwen2.5-VL QC, FFmpeg/Remotion mastering"
+  # Operator directive: the NVIDIA box is permanently EXCLUDED from the video-factory
+  # pool and must never be powered off or interrupted. It is only the business LLM brain.
+  nvidia_rtx5090_24gb: "NOT a render worker: primary LLM brain (Basalt/Strata) only. Never interrupted, never powered down, never scheduled for video work."
+  mac_m5_max_128gb: "Sole local worker, runs the whole local pipeline SEQUENTIALLY (one GPU stage at a time): Audio stems (BS-RoFormer/Demucs), BPM grid, WhisperX phonemes, LTX-2.5 drafts/B-roll, local lip-sync fallback, SeedVR2 upscale, Qwen2.5-VL QC, FFmpeg/Remotion mastering, LUT/grain, loudness"
+  spare_box_on_request: "If the local lip-sync fallback or SeedVR2 proves impractical on Apple Silicon, ask the operator for a spare Linux+NVIDIA machine instead of touching the brain box."
 
 tracks:
   commercial_claryel:
@@ -227,9 +230,13 @@ tracks:
         route_A_vocal_closeup:
           audio_input: "vocals_dry.wav (isolated stem ONLY)"
           primary_cloud: ["OmniHuman-2.0", "Seedance-2.5-A2V", "Sync-3"]
+          # CUDA-only fallbacks: UNAVAILABLE while the sole local worker is Apple Silicon.
+          # Route A then ships 100% via the cloud engines, or the operator attaches a spare Linux+NVIDIA box.
           fallback_local: ["LiveAvatar-4step", "Wan2.2-S2V", "LatentSync-1.6"]
+          fallback_local_requires: "Linux + NVIDIA (MPS port not viable at 18 GB weights); disabled by default"
         route_B_atmosphere_broll:
-          primary_local: ["LTX-2.5 (First+Last frame lock)", "pi-H3 (4 steps)"]
+          primary_local: ["LTX-2.5 (First+Last frame lock)"]
+          secondary_local: ["pi-H3 (4 steps)"] # only if a spare NVIDIA box is attached
         route_C_complex_motion:
           primary_cloud: ["Kling-4.0", "Seedance-2.5", "Veo-3.1"]
       5_qc_gate_v2:
